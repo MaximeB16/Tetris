@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Design_sans_titre-removebg-preview.png">
+    <title>Tetris</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+        }
+        #scoreboard {
+            text-align: center;
+            font-size: 20px;
+            margin: 20px;
+        }
+        #startButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="scoreboard">
+        Score: <span id="score">0</span>
+    </div>
+    
+    <canvas id="tetris" width="300" height="600"></canvas>
+    
+    <!-- Bouton pour démarrer le jeu -->
+    <button id="startButton">Démarrer le jeu</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
