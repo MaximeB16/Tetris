@@ -190,6 +190,9 @@ function afficheClassement() {
         scoreElement.textContent = `${score}`; // Définit le texte avec le score
         classementList.appendChild(scoreElement); // Ajoute l'élément à la liste
     });
+    if(Classement.length>=10){
+        Classement.pop();
+    }
 }
 
 function drawNextPiece() {
@@ -236,6 +239,15 @@ function sweepArena() {
 
 function updateScore() {
     document.getElementById('score').innerText = player.score;
+    if(parseInt(document.getElementById('score').innerText)>Classement[0]){
+        document.getElementById('score').style.color = 'gold'
+    }else if(parseInt(document.getElementById('score').innerText)>Classement[1]){
+        document.getElementById('score').style.color = 'silver'
+    }else if(parseInt(document.getElementById('score').innerText)>Classement[2]){
+        document.getElementById('score').style.color = '#cd7f32'
+    }else{
+        document.getElementById('score').style.color = 'white'
+    }
 }
 
 // Fonction pour réinitialiser l'arène après la fin du jeu
